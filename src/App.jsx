@@ -18,6 +18,7 @@ import {
 import './App.css'
 
 const resumeUrl = `${import.meta.env.BASE_URL}Bryan_Zevada_Resume.pdf`
+const profilePhotoUrl = `${import.meta.env.BASE_URL}profile-picture.jpg`
 
 const navItems = [
   ['About', '#about'],
@@ -223,8 +224,8 @@ function Hero() {
       </div>
 
       <aside className="hero-panel" aria-label="Professional snapshot">
-        <div className="profile-orbit" aria-hidden="true">
-          <span>BZ</span>
+        <div className="profile-orbit">
+          <img src={profilePhotoUrl} alt="Bryan Zevada" />
         </div>
         <dl className="snapshot-list">
           <div>

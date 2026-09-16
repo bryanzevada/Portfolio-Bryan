@@ -167,8 +167,12 @@ function Header() {
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label="Bryan Zevada home">
-        <span className="brand-mark">BZ</span>
-        <span>Bryan Zevada</span>
+        <span className="brand-mark" aria-hidden="true">
+          <span className="brand-mark-letters">BZ</span>
+          <span className="brand-mark-node node-one" />
+          <span className="brand-mark-node node-two" />
+        </span>
+        <span className="brand-name">Bryan Zevada</span>
       </a>
       <nav className="nav-links" aria-label="Primary navigation">
         {navItems.map(([label, href]) => (

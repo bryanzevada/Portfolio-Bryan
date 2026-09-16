@@ -31,15 +31,91 @@
 }
 
 .brand-mark {
-  background: var(--ink);
-  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(138, 230, 211, 0.16), rgba(244, 181, 74, 0.12)),
+    var(--ink);
+  border: 1px solid rgba(16, 32, 42, 0.12);
+  border-radius: 10px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 10px 22px rgba(16, 24, 32, 0.12);
   color: #ffffff;
   display: grid;
-  font-size: 0.78rem;
-  height: 36px;
-  letter-spacing: 0;
+  height: 42px;
+  overflow: hidden;
   place-items: center;
-  width: 36px;
+  position: relative;
+  width: 42px;
+}
+
+.brand-mark::before {
+  background: linear-gradient(90deg, var(--accent), var(--warning));
+  bottom: 0;
+  content: '';
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.brand-mark::after {
+  background: rgba(255, 255, 255, 0.12);
+  content: '';
+  height: 58px;
+  left: 50%;
+  position: absolute;
+  top: -8px;
+  transform: rotate(35deg);
+  width: 1px;
+}
+
+.brand-mark-letters {
+  font-size: 0.82rem;
+  font-weight: 950;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 1;
+}
+
+.brand-mark-node {
+  background: var(--accent);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  height: 9px;
+  position: absolute;
+  width: 9px;
+  z-index: 2;
+}
+
+.brand-mark-node::before {
+  background: rgba(138, 230, 211, 0.62);
+  content: '';
+  height: 2px;
+  position: absolute;
+  transform-origin: left center;
+  width: 18px;
+}
+
+.node-one {
+  left: 6px;
+  top: 8px;
+}
+
+.node-one::before {
+  left: 6px;
+  top: 2px;
+  transform: rotate(18deg);
+}
+
+.node-two {
+  bottom: 8px;
+  right: 6px;
+}
+
+.node-two::before {
+  right: 6px;
+  top: 2px;
+  transform: rotate(198deg);
 }
 
 .nav-links {
@@ -695,7 +771,7 @@
     display: none;
   }
 
-  .brand span:last-child {
+  .brand-name {
     display: inline;
   }
 
